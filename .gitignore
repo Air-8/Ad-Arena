@@ -1,0 +1,7 @@
+# Default: ignore everything
+*
+
+# Keep minimal files required for Streamlit deployment
+!.gitignore
+!streamlit.py
+!requirements.txt
