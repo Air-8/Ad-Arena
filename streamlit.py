@@ -28,7 +28,17 @@ DATA_CSV_URL = (
     or get_secret_safe("DATA_CSV_URL", "")
 )
 
+import urllib.request
 
+st.markdown("#### [调试] DATA_CSV_URL: " + DATA_CSV_URL)
+try:
+    with urllib.request.urlopen(DATA_CSV_URL) as resp:
+        content = resp.read().decode("utf-8")
+    st.markdown("#### [调试] CSV 前200字符：")
+    st.code(content[:200])
+except Exception as e:
+    st.error(f"[调试] 读取 DATA_CSV_URL 失败: {e}")
+    
 @st.cache_data
 def load_data(path, csv_url=""):
     samples = []
