@@ -10,8 +10,7 @@ from urllib.error import URLError
 from supabase import create_client, Client
 from streamlit.errors import StreamlitSecretNotFoundError
 
-DATA_PATH = ""
-# os.path.join("data", "stage4_reorganized_top4_thr0_8_pairwise.csv")
+DATA_PATH = os.path.join("data", "stage4_reorganized_top4_thr0_8_pairwise.csv")
 
 
 def get_secret_safe(key: str, default: str = "") -> str:
@@ -182,6 +181,14 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Candidate 1")
+    st.markdown(
+        "<div style='padding:8px 12px; margin-bottom:10px; "
+        "background:#FFF8E1; border-left:4px solid #F5A623; "
+        "border-radius:4px; font-size:14px; color:#5A4500;'>"
+        "⚠ <strong>Notice:</strong> This response may contain sponsored content."
+        "</div>",
+        unsafe_allow_html=True,
+    )
     render_candidate_text(shown_candidate_1)
 
 with col2:
