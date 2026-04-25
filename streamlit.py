@@ -184,7 +184,7 @@ with col1:
     st.markdown(
         "<div style='padding:8px 12px; margin-bottom:10px; "
         "background:#FFF8E1; border-left:4px solid #F5A623; "
-        "border-radius:4px; font-size:13px; color:#5A4500;'>"
+        "border-radius:4px; font-size:13.5px; color:#5A4500;'>"
         "<strong>Notice:</strong> This response may contain sponsored content."
         "</div>",
         unsafe_allow_html=True,
