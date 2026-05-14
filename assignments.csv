@@ -1,0 +1,7 @@
+user_id,part,condition,batch_id,start_row,end_row
+user_p1,part1,,trial_001,0,25
+user_c1,part2,C1,trial_001,0,100
+user_c2,part2,C2,trial_001,0,100
+user_c3,part2,C3,trial_001,0,100
+user_c4,part2,C4,trial_001,0,100
+user_c5,part2,C5,trial_001,0,100
